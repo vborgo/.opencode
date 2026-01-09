@@ -1,0 +1,37 @@
+{
+  "plugin": [
+    "oh-my-opencode",
+    "opencode-antigravity-auth@1.2.8",
+    "opencode-openai-codex-auth"
+  ],
+  "$schema": "https://opencode.ai/config.json",
+ "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://aipc.local:11434/v1"
+      },
+      "models": {
+        "primary-coding-model:latest": {
+          "name": "Sisyphus - Primary Coding Model",
+        },
+        "fast-coding-model:latest": {
+          "name": "Librarian - Fast Coding Model",
+        },
+        "code-exploration-model:latest": {
+          "name": "Explore - Code Exploration Model",
+        },
+        "reasoning-model:latest": {
+          "name": "Oracle - Reasoning Model",
+        },
+        "frontend-model:latest": {
+          "name": "Frontend UI/UX Engineer Model",
+        },
+        "multimodal-model:latest": {
+          "name": "Multimodal Looker Model",
+        }
+      }
+    }
+  }
+}
