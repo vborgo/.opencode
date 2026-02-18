@@ -17,7 +17,7 @@ echo "Strategy: Quantized models for multi-agent concurrency"
 echo ""
 
 # Always loaded:
-PRIMARY_CODING_MODEL="devstral-small-2:24b" # Instruction tunned by default
+PRIMARY_CODING_MODEL="qwen3-vl:32b"
 FAST_CODING_MODEL="rnj-1:8b" # Instruction tunned by default
 
 # Frequently used:
@@ -51,11 +51,11 @@ PARAMETER num_gpu $gpu_layers
 PARAMETER num_thread 24
 PARAMETER num_batch 512
 
-# Performance optimizations
-PARAMETER repeat_penalty 1.1
-PARAMETER temperature 0.7
-PARAMETER top_p 0.9
-PARAMETER top_k 40
+# More deterministic for PCB design accuracy
+PARAMETER repeat_penalty 1.2
+PARAMETER temperature 0.3
+PARAMETER top_p 0.85
+PARAMETER top_k 30
 
 # System message for coding tasks
 SYSTEM You are a highly skilled AI assistant specialized in software development and coding tasks.

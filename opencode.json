@@ -1,11 +1,28 @@
 {
   "plugin": [
-    "oh-my-opencode",
-    "opencode-antigravity-auth@1.2.8",
+    "opencode-antigravity-auth@1.4.5",
     "opencode-openai-codex-auth"
   ],
+
   "$schema": "https://opencode.ai/config.json",
- "provider": {
+  "permission": {
+    "bash":"allow",
+    "edit": "ask",
+    "write": "deny",
+    "read": "allow",
+    "grep": "allow",
+    "glob": "allow",
+    "list": "allow",
+    "lsp": "deny",
+    "patch": "deny",
+    "skill":"allow",
+    "todowrite":"allow",
+    "todoread":"allow",
+    "webfetch": "allow",
+    "question": "allow",
+  },
+
+  "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama (local)",
@@ -14,16 +31,16 @@
       },
       "models": {
         "primary-coding-model:latest": {
-          "name": "Sisyphus - Primary Coding Model",
+          "name": "Primary Coding Model",
         },
         "fast-coding-model:latest": {
-          "name": "Librarian - Fast Coding Model",
+          "name": "Fast Coding Model",
         },
         "code-exploration-model:latest": {
-          "name": "Explore - Code Exploration Model",
+          "name": "Code Exploration Model",
         },
         "reasoning-model:latest": {
-          "name": "Oracle - Reasoning Model",
+          "name": "Reasoning Model",
         },
         "frontend-model:latest": {
           "name": "Frontend UI/UX Engineer Model",
@@ -33,5 +50,18 @@
         }
       }
     }
-  }
+  },
+  "mcp": {
+    "kicad": {
+      "type": "local",
+      "command": [
+        "node",
+        "../mcps/KiCAD-MCP-Server/dist/index.js"
+      ],
+      "enabled": true,
+      "environment": {
+        "LOG_LEVEL": "info"
+      }
+    }
+  },
 }
