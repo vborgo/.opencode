@@ -1,6 +1,6 @@
 {
   "plugin": [
-    "opencode-antigravity-auth@1.4.5",
+    "opencode-antigravity-auth@1.6.0",
     "opencode-openai-codex-auth"
   ],
 
@@ -47,6 +47,29 @@
         },
         "multimodal-model:latest": {
           "name": "Multimodal Looker Model",
+        }
+      }
+    },
+    "vllm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "vLLM (local)",
+      "options": {
+        "baseURL": "http://aipc.local:8000/v1"
+      },
+      "models": {
+        "mistralai/Devstral-Small-2-24B-Instruct-2512": {
+          "name": "Devstral S 2 24B",
+          "limit": {
+            "output": 4096,
+            "context": 32768
+          }
+        },
+        "Qwen/Qwen3.5-27B-FP8": {
+          "name": "Qwen 3.5 27B FP8",
+          "limit": {
+            "output": 4096,
+            "context": 131072
+          }
         }
       }
     }

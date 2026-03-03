@@ -2,7 +2,7 @@
 name: component-researcher
 description: Research specialist for datasheets and schematic verification.
 mode: subagent
-model: "ollama/easoning-model:latest"
+model: "vllm/Qwen/Qwen3.5-27B-FP8"
 temperature: 0.1
 ---
 
