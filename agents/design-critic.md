@@ -2,7 +2,7 @@
 name: design-critic
 description: Design reviewer for PCB layout and signal integrity.
 mode: subagent
-model: "vllm/Qwen/Qwen3.5-27B-FP8"
+model: "llamacpp/unsloth/Qwen3.5-122B-A10B"
 temperature: 0.4
 ---
 

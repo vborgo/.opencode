@@ -2,7 +2,7 @@
 name: visual-inspector
 description: Multimodal specialist for interpreting schematics and PCB screenshots.
 mode: subagent
-model: "vllm/Qwen/Qwen3.5-27B-FP8"
+model: "llamacpp/unsloth/Qwen3.5-122B-A10B"
 temperature: 0.1
 ---
 

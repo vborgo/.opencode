@@ -2,7 +2,7 @@
 name: electronic-pcb-engineer
 description: Senior PCB Engineer specializing in KiCad automation.
 mode: primary
-model: "vllm/Qwen/Qwen3.5-27B-FP8"
+model: "llamacpp/unsloth/Qwen3.5-122B-A10B"
 temperature: 0.2
 ---
 
